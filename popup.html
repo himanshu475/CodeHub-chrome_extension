@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      width: 300px;
+      background-color: #f8f9fa;
+    }
+    h1 {
+      font-size: 18px;
+      text-align: center;
+    }
+    input, button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .snippet-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .snippet-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      padding: 8px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .snippet-title {
+      font-size: 14px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .snippet-actions {
+      display: flex;
+      gap: 5px;
+    }
+    .action-btn {
+      padding: 5px;
+      font-size: 12px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .view-btn { background-color: #6c757d; color: white; }
+    .copy-btn { background-color: #28a745; color: white; }
+    .delete-btn { background-color: #dc3545; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Code Hub</h1>
+  <input type="text" id="searchInput" placeholder="Search snippets...">
+  <input type="text" id="snippetTitle" placeholder="Snippet Title">
+  <textarea id="snippetCode" placeholder="Enter your code here..."></textarea>
+  <button id="saveSnippet">Save Snippet</button>
+  <ul id="snippetList" class="snippet-list"></ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>
